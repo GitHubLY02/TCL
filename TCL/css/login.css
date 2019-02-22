@@ -1,0 +1,183 @@
+@charset "utf-8";
+html,body{
+    height: 100%;
+}
+body{
+    font-family: "Hiragino Sans GB","Microsoft Yahei",Lato,Arial,sans-serif;
+    font-size: 16px;
+    color: #666;
+    min-height: 100%;
+    position: relative;
+    background-color: #fff!important;
+    min-width: 1224px;
+}
+.headerBox {
+    width: 1226px;
+    margin: 0 auto;
+}
+.headerBox .header {
+    padding: 20px 0 20px;
+    height: 45px;
+    margin-left: 20px;
+}
+.headerBox .header  a{
+    float: left;
+}
+.headerBox .header .crumb {
+    font-size: 32px;
+    color: #666;
+    line-height: 45px;
+    margin-left: 30px;
+    font-weight: lighter;
+}
+
+.login-box {
+    position: relative;
+    height: 480px;
+    background: #151e31;
+    background-image: url(../images/login/back.jpg);
+    background-position: center 0;
+    background-repeat: no-repeat;
+}
+.login-box .login-cont {
+    width: 280px;
+    height: 378px;
+    border: 1px solid #ccc;
+    background: #fff;
+    top: 40px;
+    right: 0;
+    padding: 20px 40px 20px;
+}
+.pa{
+    position: absolute;
+}
+.login-box .main {
+    margin-top: 0;
+}
+.main {
+    width: 1226px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+.pr {
+    position: relative;
+}
+.login-box .login-cont .login-cont-hd {
+    margin: 3px 0 15px 0;
+    border-bottom: 1px solid #979797;
+    overflow: hidden;
+}
+.login-box .login-cont  h3 {
+    float: left;
+    line-height: 32px;
+    color: #333;
+}
+.login-box .login-cont .t-party-ico {
+    float: right;
+}
+.login-box .login-cont .t-party-ico .iconfont {
+    margin-left: 10px;
+    width: 32px;
+    height: 32px;
+    display: block;
+    float: left;
+    text-decoration: none;
+    font-size: 32px;
+}
+.login-box .login-cont .t-party-ico .iconfont:first-child{
+    color: #26b50d;
+}
+.login-box .login-cont .t-party-ico .iconfont:nth-of-type(2){
+    color: #3ec5f8;
+}
+.login-box .login-cont .t-party-ico .iconfont:last-child{
+    color: #ff5322;
+}
+.login-box .login-cont .log-title {
+    font-size: 18px;
+    color: #333;
+    line-height: 36px;
+}
+.login-box .login-cont .fm-group {
+    margin-top: 5px;
+    padding-bottom: 15px;
+}
+.login-box .login-cont .fm-group .linfo {
+    border: 1px solid #999;
+    padding: 0;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-indent: 50px;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+.login-box .login-cont .fm-group .iky01 {
+    background-position: -32px -1px;
+}
+.login-box .login-cont .fm-group .iconfont {
+    font-size: 25px;
+    margin: 5px 0 0 8px;
+}
+.login-box .login-btn {
+    margin:0;
+    padding: 0;
+    margin-top: 5px;
+}
+.login-box .login-btn a{
+    padding: 0;
+    color: #fff;
+    width: 100%;
+    height: 40px;
+    display: block;
+    cursor: pointer;
+    border: 0;
+    line-height: 40px;
+    text-align: center;
+    background: red;
+    font-size: 16px;
+}
+.login-box .o-methds {
+    width: 350px;
+    margin-top: 4px;
+}
+.login-box .o-methds a {
+    font-size: 12px;
+    color: #333;
+    line-height: 20px;
+    margin-right: 44px;
+    display: inline-block;
+    text-decoration: none;
+}
+.login-box .o-methds a:nth-child(3) {
+    margin-right: none;
+    margin-right: 0;
+}
+.footerBox {
+    width: 1226px;
+    margin: 42px auto 60px;
+}
+.footerBox .footnav {
+    width: 500px;
+    margin: 0 auto;
+}
+.footerBox .footnav a {
+    display: inline-block;
+    width: 92px;
+    text-align: center;
+    border-right: 1px solid #ccc;
+    line-height: 12px;
+    font-size: 12px;
+    color: #666;
+}
+.footerBox .copyright {
+    font-size: 12px;
+    color: #999;
+    line-height: 18px;
+    text-align: center;
+    margin-top: 13px;
+}
+.footerBox .copyright a{
+    text-decoration: none;
+    color: #333;
+}
