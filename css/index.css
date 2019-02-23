@@ -127,9 +127,9 @@ a, a:hover {
     float: left;
 }
 .nav-left .list{
-    width: 1110px;
+    width: 1349px;
      height: 160px;
-    margin: -40px auto;
+    margin: -40px 0px 0px -210px;
     z-index: 18;
     background-color: #fff;
     display: none;
@@ -139,6 +139,8 @@ a, a:hover {
 }
 .nav-left .list .all{
     position: absolute;
+    margin-left: 130px;
+
 }
 .nav-left .list .all div{
     max-width: 162px;

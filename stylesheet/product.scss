@@ -1,0 +1,682 @@
+@charset "utf-8";
+html,body{
+	height: 100%;
+    background-color: #FFF;
+}
+body{
+	background: #f5f5f5;
+	color: #666;
+}
+*{
+	margin:0;
+	padding: 0;
+}
+a {
+    color: #555;
+    outline: 0;
+}
+a, a:hover {
+    text-decoration: none;
+}
+/*header*/
+.headerBox{
+	width: 1349px;
+}
+.headerBox .header{
+}
+.headerBox .header .top-bar{
+	width:100%;
+	background: #666;
+	line-height: 40px;
+}
+.headerBox .header .top-bar .top-bar-left li{
+	margin-left: 43px;
+	height: 41px;
+	display: inline-block;
+}
+.headerBox .header .top-bar .top-bar-left li a{
+	font-size: 11px;
+	color:rgb(204, 204, 204);
+	text-decoration: none;
+}
+.headerBox .header .top-bar .top-bar-right{
+	position: absolute;
+	right: 70px;
+	top: 0;
+}
+.headerBox .header .top-bar .top-bar-right li{
+	height: 41px;
+	display: inline-block;
+	padding: 0 5px; 
+	text-align:center;
+}
+.headerBox .header .top-bar .top-bar-right li span{
+	font-size: 13px;
+	color:rgb(204, 204, 204);
+}
+.headerBox .header .top-bar .top-bar-right li a{
+	font-size: 11px;
+	color:rgb(204, 204, 204);
+	text-decoration: none;
+	display: inline-block;
+}
+.headerBox .header .top-bar .top-bar-right li i{
+	width: 1px;
+	height: 13px;
+	border-right: 1px solid #979797;
+	margin-left: 15px;
+	float: right;
+	margin-top: 16px;
+	display: inline-block;
+}
+/*nav*/
+.headerBox .header .nav{
+	width: 100%;
+	background-color: #fff;
+}
+.headerBox .header .nav .nav-content{
+	width: 1270px;
+	height: 40px;
+	padding: 10px 0;
+	line-height: 50px;
+	margin: 0 auto;
+	position: relative;
+}
+.headerBox .header .nav .nav-content h1{
+	width: 75px;
+	float: left;
+	line-height: 40px;
+}
+.headerBox .header .nav .nav-content h1 .logo{
+    color: red;
+    font-size: 75px;
+    font-weight: 100;
+    margin-top: -3px;
+    text-decoration: none;
+}
+ .headerBox .header .nav .nav-content .nav-left{
+    position: relative;
+    /*height:250px;*/
+    
+    float: left;
+    width: 470px;
+    margin-left: 100px;
+
+
+}
+.nav-left .title{
+    height: 40px;
+    line-height: 40px;
+    float: left;
+}
+.nav-left a{
+     text-decoration: none;
+    font-size: 14px;
+    color: #333;
+    display: block;
+    padding: 0 16px 12px 17px;
+    float: left;
+}
+.nav-left .title .active{
+    border-bottom: 4px solid red;
+    color: red;
+     text-decoration: none;
+    font-size: 14px;
+    color: #333;
+    display: block;
+    padding: 0 16px 12px 17px;
+    float: left;
+}
+.nav-left .list{
+    width: 1349px;
+     height: 160px;
+    margin: -44px 0px 0px -210px;
+    z-index: 18;
+    background-color: #fff;
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    top: 98px;
+}
+.nav-left .list .all{
+    position: absolute;
+    margin-left: 130px;
+
+}
+.nav-left .list .all div{
+    max-width: 162px;
+    margin: 0 30px;
+    float: left;
+    list-style-type: none;
+    z-index: 20;
+}
+.nav-left .list .all div .m_tit {
+    height: 12px;
+    font-size: 12px;
+    margin-top: 8px;
+    line-height: 12px;
+    text-align: center;
+    color: #333;
+    overflow: hidden;
+}
+.nav-left .list div .red {
+    font-size: 12px;
+    line-height: 24px;
+    text-align:center;
+}
+.nav-left .list div img {
+    max-width: 160px;
+    max-height: 100px;
+}
+.headerBox .header .nav .nav-content .nav-right{
+	    height: 100%;
+	    line-height: 40px;
+	    float: right;
+	    position: relative;
+}
+.headerBox .header .nav .nav-content .nav-right i{
+	display: inline-block;
+	border-left: 1px solid #e3e3e3;
+    width: 1px;
+    height: 18px;
+    margin: 0 7px 0 0;
+}
+.headerBox .header .nav .nav-content .nav-right a{
+	padding: 0 10px;
+    font-size: 14px;
+    outline: 0;
+    text-decoration: none;
+}
+.headerBox .header .nav .nav-content .nav-right span input{
+	border: 1px solid #ccc;
+    height: 34px;
+    padding: 0 5px;
+    width: 233px;
+}
+.headerBox .header .nav .nav-content .nav-right .iconfont{
+	background-color: #e4e4e4;
+    width: 28px;
+    height: 28px;
+    display: block;
+    text-align: center;
+    line-height: 28px;
+    border-radius: 50%;
+    position: absolute;
+    right: 9px;
+    top: 8px;
+}
+
+/*t-nav*/
+.t-navBox{
+    height: 50px;
+    width:1349px;
+    line-height: 50px;
+    background: #f0f0f0;
+    .t-nav{
+        overflow: hidden;
+        zoom: 1;
+        width: 1226px;
+        margin:0 auto;
+        .t-con{
+            float: left;
+        }
+    }
+}
+
+/*purchase*/
+.purchaseBox{
+    background-color: #FFF;
+     margin:-20px 0 0 0;
+}
+.purchase{
+   width: 980px;
+    min-height: 620px;
+    margin:0 auto;
+    position: relative;
+    background-color: #FFF;
+    border: none!important;
+    overflow: visible!important;
+    .purc-l{
+        padding: 0 70px;
+        width: 440px;
+        position: absolute;
+        top: 0;
+        .imgLoad{
+            width: 440px;
+            height: 440px;
+            overflow: hidden;
+            position: relative;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #ccc;
+            .purc-t{
+                width: 440px;
+                height: 440px;
+                position: absolute;
+                display: none;
+                img{
+                    width: 440px;
+                    height: 440px;
+                }
+            }
+        }
+    }
+}   
+ .purc-list {
+    height: 100px;
+    margin-top: 20px;
+    text-align: center;
+}
+    .purc-b{
+        width: 60px;
+        height: 60px;
+        border-radius: 0;
+        display: inline-block;
+        margin: 0 5px;
+        cursor: pointer;
+        border: 2px solid #ccc;
+        overflow: hidden;
+        img{
+            width: 60px;
+            height: 60px;
+        }
+    }
+.purc-list #active {
+    border-color: red;
+}
+.purc-r{
+    margin-left: 580px;
+    .r-text{
+            border-bottom: 1px solid #ccc;
+            padding: 22px 0;
+        .purc-text{
+
+            h1 {
+                display: block;
+                font-size: 2em;
+                margin-block-start: 0.67em;
+                margin-block-end: 0.67em;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+                font-weight: bold;
+            }
+            .purc-desc{
+                font-size: 12px;
+                line-height: 19px;
+                color: #999;
+                height:76px;
+                .desc {
+                    width: 80%;
+                    line-height: 19px; 
+                    float: left;
+                    b{
+                        font-weight: normal;
+                    }
+                }
+                span{
+                    display: inline-block;
+                    float: right;
+                }
+            }
+        }
+    }
+} 
+.integral{
+    color: #666;
+    font-size: 12px;
+    line-height: 19px;
+    margin-top:10px;
+    span{
+        font-style: normal;
+        color: #999;
+        em{
+            font-style: normal;
+        }
+    }
+}
+.render-price{
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    padding: 22px 0;
+    height: 35px;
+    .r-price{
+        p{
+            display: inline-block;
+            float: left;
+            strong{
+                font-size: 14px;
+                 color: #333;
+            }
+            i{
+                color: red;
+                display: inline-block;
+                margin-left: 8px;
+                em{
+                    font-size: 24px;
+                    font-style: normal;
+                }
+            }
+            span{
+                    line-height: 30px;
+                    margin-right: 20px;
+                    font-size:14px;
+                    text-decoration: line-through;
+                }
+
+        }
+    }
+}
+.img{
+    position: relative;
+    font-size: 12px;
+    line-height: 30px;
+    cursor: pointer;
+    float: left;
+    img{
+        margin-top: -2px;
+    }
+}
+.groupedProduct{
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    padding: 22px 0;
+    .sele {
+        font-size: 14px;
+        color: #333;
+    }
+    .options {
+        font-size: 0;
+        margin-top: 20px;
+        span{
+            width: 28%;
+            margin: 10px 8px 0 0;
+            line-height: 64px;
+            text-align: center;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            color: #666;
+            display: inline-block;
+            height: 64px;
+            cursor: pointer;
+        }
+        .active {
+                    color: red;
+                    border-color: red;
+                }
+    }
+}
+.p-buy{
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    padding: 22px 0;
+     height: 64px;
+    .select{
+        width: 90px;
+        height: 64px;
+        margin-right: 10px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        overflow: hidden;
+        position: relative;
+        margin-right: 5px;
+        float: left;
+        input{
+            width: 56px;
+            height: 64px;
+            float: left;
+            color: #666;
+            border:none;
+            border-right: 1px solid #ccc;
+            line-height: 64px;
+            font-size: 18px;
+            text-align: center;
+        }
+        .mun{
+            width: 32px;
+            height: 64px;
+            right: 0;
+            position: absolute;
+            a{
+                width: 100%;
+                height: 20px;
+                text-align: center;
+                display: block;
+                cursor: pointer;
+            }
+            .add{
+                margin-top: 12px;
+                background-position: -269px -36px;
+            }
+            .reg {
+                margin-bottom: 12px;
+                background-position: -238px -42px;
+            }
+        }
+    }
+}
+.p-buy{
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    padding: 22px 0;
+    .buy-car{
+        display: inline-block;
+        vertical-align: top;
+        padding: 0;
+        border-color: transparent;
+        border-bottom: 1px solid #ccc;
+        position: relative;
+        float: left;
+        .buy{
+            height: 64px;
+            line-height: 64px;
+            text-align: center;
+            color: #FFF;
+            font-family: 'Microsoft Yahei',Arial;
+            display: inline-block;
+            vertical-align: top;
+            width:136px;
+            border: 1px solid red;
+            background-color: red;
+        }
+        .car{
+            height: 64px;
+            width:136px;
+             line-height: 64px;
+            text-align: center;
+            background-color: #fff;
+            color: red;
+            font-family: 'Microsoft Yahei',Arial;
+            display: inline-block;
+            vertical-align: top;
+            line-height: 64px;
+            font-size: 18px;
+            text-align: center;
+            border: 1px solid red;
+        }
+    }
+}
+/*help*/
+.help{
+    width: 100%;
+    height: auto;
+    padding: 40px 0 41px;
+    background-color: #f0f0f0;
+}
+.help .min-wid{
+    overflow: hidden;
+    position: relative;
+    width:1226px;
+    margin:0 auto;
+}
+.help .min-wid dl{
+    float: left;
+    margin-right: 112px;
+}
+.help .min-wid dl dt{
+    font-size: 14px;
+    line-height: 14px;
+    padding-bottom: 20px;
+    color: #333;
+    font-weight: 700;
+}
+.help .min-wid dl dd a{
+    color: #999;
+    outline: 0;
+    display: inline-block;
+    padding-bottom: 12px;
+    font-size: 12px;
+}
+.help .min-wid dl dd img{
+    height: 120px;
+    width: 120px;
+}
+.last-r{
+    width: 172px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    margin-right: 0;
+}
+.last-r .phone{
+    font-size: 20px;
+    line-height: 20px;
+    padding-bottom: 2px;
+    text-align: center;
+    letter-spacing: 2px; 
+}
+.red{
+    color: red;
+}
+.last-r .grey {
+    font-size: 12px;
+    color: #999;
+    line-height: 18px;
+    text-align: center;
+}
+.last-r a{
+    width: 160px;
+    height: 36px;
+    color: red;
+    font-size: 12px;
+    padding: 2px;
+    margin-top: 20px;
+    border: 1px solid red;
+    display: inline-block;
+    -webkit-user-select: none;
+    line-height: 32px;
+}
+.last-r a i{
+    color: red;
+    font-size: 22px;
+    font-family: iconfont-tcl;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 8px;
+    line-height: 30px;
+}
+/*footer*/
+.footer{
+    width: 100%;
+    padding: 25px 0;
+    font-size: 12px;
+    color: #999;
+    background-color: #e3e3e3;
+}
+.footer>div{
+    width: 1226px;
+    margin: 0 auto;
+    line-height: 22px;
+    position: relative;
+}
+.footer .foot-logo{
+    width: 50px;
+    height: 40px;
+    color: red;
+    font-size: 50px;
+    position: absolute;
+    left: 0;
+    top: -10px;
+    z-index: 2;
+    display: none;
+}
+.footer .blod a:nth-child(1) {
+    padding-left: 0;
+}
+.footer p.blod>a {
+    color: #666;
+}
+.footer .blod a {
+    padding: 0 15px;
+}
+.footer .marginL {
+    margin-left: 10px;
+}
+.footer p>a {
+    color: #999;
+}
+.footer p a img{
+    margin: -3px 3px 0 0;
+    width: 16px;
+}
+.footer .foot-r{
+    line-height: 29px;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    z-index: 10;
+}
+.footer .foot-r .language{
+        margin-left: 10px;
+    vertical-align: top;
+    display: inline-block;
+    height:29px;
+    position: relative;
+}
+.footer .language .lang-item {
+    width: auto;
+    padding: 0 12px;
+    display: inline-block;
+    bottom: 29px;
+    cursor: pointer;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+}
+.footer .AC div{
+    width: 88px;
+    height:32px;
+    margin:0 auto;
+}
+.footer .AC>div>img{
+    display: inline-block;
+    width: 88px;
+    height: 32px;
+    
+    margin: 0 2px;
+}
+/*goTop*/
+.goTop{
+    position: fixed;
+    right: 30px;
+    bottom: 150px;
+    z-index: 20000;
+    width: 46px;
+    height: 46px;
+}
+.goTop a{
+    width: 46px;
+    height: 46px;
+    display: block;
+    cursor: pointer;
+    vertical-align: top;
+    line-height: 46px;
+    text-align: center;
+    transition: all .2s;
+    border: 1px solid #ededed;
+    background-color: #FFF;
+    color: #979797;
+    position: relative;
+    overflow: hidden;
+}
+.goTop .iconfont{
+     font-size: 22px;
+}

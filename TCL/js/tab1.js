@@ -1,9 +1,9 @@
 define(["jquery"], function($){
-	function tabSwitch(){
+	function tab1(){
 		$(function(){
 			//通过ajax下载数据
 			$.ajax({
-				url:`../data/data_nav.json`,
+				url:`../data/data_nav1.json`,
 				success:function(arr){
 					for(var i = 0; i < arr.length; i++){
 						if(i == 0){
@@ -60,9 +60,45 @@ define(["jquery"], function($){
 				$(".nav-left").find(".list").css("display", "none");
 				$(".nav-left").find(".list").find("div").css("display", "none");				
 			})
+			//点击改变颜色
+			
+			$(".purc-list").on("click","span",function(){
+				$(".purc-list").find(".purc-b").attr("id","");
+				$(this).attr("id","active");
+				var index = $(this).index();
+				$(".imgLoad").find(".purc-t").css("display","none");
+				$(".imgLoad").find(".purc-t").eq(index).css("display","block");
+			})
+			$(".options").on("click","span",function(){
+				$(".options").find("span").attr("class","");
+				$(this).attr("class","active");
+			})
+			//点击+点击-
+			/*$(".mun").on("click","a",function(){
+				var count = 0;
+				count++;
+				for(var i = 0; i < count; i++){
+					if($(this).index() == 0){
+						count++;
+						// alert(count);
+						$("input").val(count);
+					}else{
+						count--;
+						// alert(count);
+						if(count <= 0){
+							$("input").val(0);
+						}else{
+							$("input").val(count);
+						}
+						
+					}
+				}
+				
+			})*/
+
 		})
 	}
 	return {
-		tabSwitch: tabSwitch
+		tab1: tab1
 	}
 })

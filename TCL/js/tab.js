@@ -54,6 +54,9 @@ define(["jquery"], function($){
 			})
 			$(".nav-left").on("mouseout", "a", function(){
 				$(this).attr("class", "");
+			})
+			$(".nav-left").on("mouseout", ".list", function(){
+				$(".nav-left").find("a").attr("class", "");
 				$(".nav-left").find(".list").css("display", "none");
 				$(".nav-left").find(".list").find("div").css("display", "none");				
 			})

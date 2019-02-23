@@ -2,6 +2,7 @@ console.log("加载完毕");
 
 /*
 	配置当前html页面要用到的所有的js文件
+	路径：自己定义名字：路径
 */
 require.config({
 	paths: {
@@ -27,6 +28,7 @@ require.config({
 
 
 //调用首页的代码
+//上面自定义的名字，参数是引入的模块对外暴露的接口（引入文件return后面的对象）
 require(["slide", "tab","color","leftNav","list","news","banner"], function(slide, tab,color,leftNav,list,news,banner){
 	slide.slide();
 	color.color();
