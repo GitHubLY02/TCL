@@ -27,7 +27,7 @@ define(["jquery"], function($){
 					}	
 				},
 				error:function(error){
-					console.logo("加载数据失败");
+					console.log("加载数据失败");
 				}
 
 			})

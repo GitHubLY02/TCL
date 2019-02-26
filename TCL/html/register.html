@@ -5,6 +5,7 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="../iconfont/iconfont.css">
 	<link rel="stylesheet" href="../css/login.css">
+	<script src = '../js/require.js' async="true" defer data-main = "../js/main-register.js"></script>
 </head>
 <body>
 	<div class="headerBox">
@@ -21,13 +22,13 @@
 				<p class="log-title">注册TCL账号</p>
 				<div class="fm-group pr">
 					<span class="iconfont ikyuser pa iky01">&#xe674;</span>
-					<input type="text" placeholder="手机号 / 邮箱 / 用户名" class="linfo">
-					<span></span>
+					<input type="text" placeholder="手机号 / 邮箱 / 用户名" class="linfo" id="phone">
+					<span style="color: red"></span>
 				</div>
 				<div class="fm-group pr">
 					<span class="iconfont ikyuser pa iky01">&#xe643;</span>
-					<input type="text" placeholder="登录密码" class="linfo">
-					<span></span>
+					<input type="password" placeholder="登录密码" class="linfo" id="password">
+					<span style="color: red"></span>
 				</div>
 				<p class="login-btn"><a href="">注册</a></p>
 				<p class="o-methds">

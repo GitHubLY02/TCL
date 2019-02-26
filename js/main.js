@@ -7,6 +7,7 @@ console.log("加载完毕");
 require.config({
 	paths: {
 		"jquery": "jquery-1.11.3",
+		"jquery-cookie": "jquery.cookie",
 		"slide": "slide",
 		"tab": "tab",
 		"color":"color",
@@ -15,15 +16,15 @@ require.config({
 		"news":"news",
 		"banner":"banner"
 	},
-	/*shim: {
+	shim: {
 		//配置jquery-cookie依赖于jquery
 		"jquery-cookie": ["jquery"],
 
 		//声明不适用AMD规范的模块
-		"parabola": {
+		/*"parabola": {
 			exports: "_"
-		}
-	}*/
+		}*/
+	}
 })
 
 

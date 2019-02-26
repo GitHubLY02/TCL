@@ -7,7 +7,7 @@ define(["jquery"], function($){
 				success:function(arr){
 					for(var i = 0; i < arr.length; i++){
 						var i = i;
-						$(`<div class="c_series series${i}">
+						$(`<div class="c_series series${i}" id="${i}">
 								<div class="clear">
 									<h2>${arr[i].title}</h2>
 									<ul></ul>
@@ -27,7 +27,7 @@ define(["jquery"], function($){
 						}
 						var arr2 = arr[i].desc;
 						for(var k = 0; k < arr2.length; k++){
-							$(`<div><a href="">
+							$(`<div><a>
 										<img src="${arr2[k].img}" alt="">
 										<p class="caption">${arr2[k].title}</p>
 										<p class="dice">${arr2[k].introduce}</p>
@@ -42,6 +42,23 @@ define(["jquery"], function($){
 					console.log("加载数据失败");
 				}
 			})		
+		})
+		$(".series").on("click",".c_series",function(){
+			var id =this.id;
+			// alert(id);
+			/*$.ajax({
+					method: 'get',
+					url: "../index.html",
+					data: `${id}`,
+					success: function(data){
+						alert(data);
+					},
+					error: function(msg){
+						alert(msg);
+					}
+
+			}) */
+			$(location).attr("href",`../html/product.html?id=${id}`);
 		})
 	}
 	return {

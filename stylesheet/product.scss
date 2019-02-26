@@ -226,7 +226,7 @@ a, a:hover {
 /*purchase*/
 .purchaseBox{
     background-color: #FFF;
-     margin:-20px 0 0 0;
+     margin:0;
 }
 .purchase{
    width: 980px;
@@ -241,6 +241,7 @@ a, a:hover {
         width: 440px;
         position: absolute;
         top: 0;
+        float: left;
         .imgLoad{
             width: 440px;
             height: 440px;
@@ -260,7 +261,43 @@ a, a:hover {
             }
         }
     }
-}   
+} 
+ #mask{
+    width: 100px; 
+    height: 100px;
+    background-color: black; 
+    opacity: 0.3; 
+    filter: alpha(opacity=30); 
+    display: none; 
+    position: absolute;
+}
+.imgLoad-big{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    float: right;
+    position: relative;
+    z-index: 30;
+    margin-right: 260px;
+    margin-top: 100px;
+    display: none;
+
+    .purc-big{
+        position: absolute;
+       top:0;
+       left: 0;
+         z-index: 30;
+         display: none;
+        img{
+             width: 880px;
+            height: 880px;
+            z-index: 30;
+        }
+     }
+}
+.p-b{
+    position: absolute;
+}
  .purc-list {
     height: 100px;
     margin-top: 20px;
@@ -285,6 +322,7 @@ a, a:hover {
 }
 .purc-r{
     margin-left: 580px;
+    position: relative;
     .r-text{
             border-bottom: 1px solid #ccc;
             padding: 22px 0;
@@ -477,7 +515,7 @@ a, a:hover {
             border: 1px solid red;
             background-color: red;
         }
-        .car{
+        .b-car{
             height: 64px;
             width:136px;
              line-height: 64px;
@@ -493,6 +531,161 @@ a, a:hover {
             border: 1px solid red;
         }
     }
+}
+/*details*/
+.detailsBox{
+    border: none!important;
+    border-top: 1px solid #e2e2e2!important;
+    background-color: #f9f9f9!important;
+    width: 100%;
+    .fixed-buy{
+        background-color: #FFF;
+        margin-top: -60px;
+        box-shadow: 0 1px 5px rgba(0,0,0,.2);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        width: 100%;
+        .fixed-box{
+            line-height: 60px;
+            margin: 0 auto;
+            width:980px;
+            .fl{
+                float: left;
+                position: relative;
+                font-size: 12px;
+                cursor: pointer;
+                line-height: 60px;
+                    font-size: 16px;
+                .lt{
+                    text-decoration: line-through;
+                }
+            }
+            .fr{
+                float: right;
+                img{
+                    width: 14px;
+                    height: 14px;
+                }
+                .bt{
+                    width: 146px;
+                    line-height: 38px;
+                    margin-left: 30px;
+                    display: inline-block;
+                    margin-top: 10px;
+                    color: #FFF;
+                    font-size: 16px;
+                    text-align: center;
+                    background-color: red;
+                    border: 1px solid red;
+                    cursor: pointer;
+                    outline: 0;
+                }
+            }
+        }
+    }
+    .details{
+        width: 980px;
+        margin: 0 auto;
+        padding-bottom: 166px;
+        position: relative;
+        overflow: hidden;
+        .details-l{
+            width: 834px;
+             background: #fff;
+             #productad{
+                margin:0 auto;
+                width: 790px;
+             }
+            #details-l{
+                margin:0 auto;
+                width: 790px;
+                img{
+                    display: block;
+                }
+            }
+            #productadTail{
+                margin:0 auto;
+                width: 790px;
+             }
+        }
+        .details-r{
+            width: 146px;
+            position: absolute;
+            top: 0;
+            right: 1px;
+            margin-top: 60px;
+            display: none;
+            ul{
+                list-style-type:none;
+                li{
+                    width: 100%;
+                    line-height: 30px;
+                    margin: 12px 0;
+                    display: block;
+                    text-indent: 38px;
+                    cursor: pointer;
+                   
+                }
+                 .active{
+                    color: red
+                }
+            }
+        }
+    }
+   
+}
+
+#y_servicebox{
+    background: #fff;
+    margin: 30px auto;
+    width: 790px;
+    .y_servicetab{
+        width: 100%;
+        overflow: hidden;
+        border-bottom: 1px solid #f1f1f5;
+        list-style-type:none;
+        li{
+            float: left;
+            width: 20%;
+            cursor: pointer;
+            text-align: center;
+            position: relative;
+            font-size: 18px;
+            color: #333;
+            padding: 20px 0;
+        }
+        .active{
+            color: red;
+        }
+    }
+    #y_sercecontent{
+        margin: 30px auto;
+        width: 790px; 
+        div{
+            display: none;
+            img{
+                display: block;
+            }
+        }
+    }
+}
+#question{
+    h2{
+        font-size: 24px;
+        text-align: center;
+        margin: auto;
+        padding: 0 0 20px;
+        border-bottom: 1px solid #F0F0F0;
+        font-weight: 100;
+    }
+    .questionitem{
+        p{
+            width: 350px;
+        }
+    }
+    
 }
 /*help*/
 .help{
