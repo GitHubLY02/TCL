@@ -152,13 +152,18 @@ a, a:hover {
 
 .sel-wid {
   width: 130px; }
-  .sel-wid span {
+  .sel-wid input {
     width: 20px;
     height: 20px;
     display: inline-block;
     background-color: #FFF;
     border: 1px solid #999;
-    cursor: pointer; }
+    cursor: pointer;
+    border: none; }
+  .sel-wid #active {
+    background-position: -209px -40px;
+    border-color: transparent;
+    background-color: red; }
 
 .pro-wid {
   width: 610px;
@@ -249,11 +254,20 @@ a, a:hover {
     font-size: 26px;
     font-style: normal; }
 
-.buy {
+.price-box .buy {
   border: 1px solid #ccc;
   width: 230px;
   height: 50px;
   background-color: #ccc;
+  color: #FFF;
+  font-size: 16px;
+  text-align: center; }
+
+.price-box #active {
+  border: 1px solid #ccc;
+  width: 230px;
+  height: 50px;
+  background-color: red;
   color: #FFF;
   font-size: 16px;
   text-align: center; }

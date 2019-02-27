@@ -24,16 +24,16 @@ define(["jquery","jquery-cookie"], function($){
 
 							//通过循环，加载我们添加购物车里面的商品
 							for(var i = 0; i < newArr.length; i++){
-								$(` <dl class="materials-box">
-										<dd class="shop-item sel-wid"><span></span></dd>
+								$(` <dl class="materials-box" id = "${newArr[i].id}">
+										<dd class="shop-item sel-wid"><input type="checkbox" class="checkbox" checked="checked"></dd>
 										<dd class="shop-item pro-wid">
 											<span class="left"><a href=""><img src="${newArr[i].img}" alt=""></a></span>
 											<span class="right"><p>${newArr[i].title}</p></span>
 										</dd>
-										<dd class="shop-item pri-wid"><span>${newArr[i].price}</span></dd>
+										<dd class="shop-item pri-wid"><span id="price">${newArr[i].price}</span></dd>
 										<dd class="shop-item num-wid">
 											<strong id = "${newArr[i].id}">-</strong>
-											<input type="text" value="${newArr[i].num}">
+											<input type="text" value="${newArr[i].num}" id="num">
 											<strong id = "${newArr[i].id}">+</strong>
 										</dd>
 										<dd class="shop-item sub-wid">
@@ -92,7 +92,8 @@ define(["jquery","jquery-cookie"], function($){
 						$.cookie("goods", null);
 					}else{
 						$.cookie("goods", JSON.stringify(cookieArr), {
-							expires: 7
+							expires: 7,
+							 path: '/'
 						})
 					}
 				}
@@ -115,7 +116,8 @@ define(["jquery","jquery-cookie"], function($){
 							$(this).prevAll("input").val(cookieArr[i].num);
 
 							$.cookie("goods", JSON.stringify(cookieArr), {
-										expires: 7
+										expires: 7,
+										 path: '/'
 									})
 							break;
 						}else{
@@ -129,7 +131,8 @@ define(["jquery","jquery-cookie"], function($){
 									$.cookie("goods", null);
 								}else{
 									$.cookie("goods", JSON.stringify(cookieArr), {
-										expires: 7
+										expires: 7,
+										 path: '/'
 									})
 								}
 
@@ -138,7 +141,8 @@ define(["jquery","jquery-cookie"], function($){
 								cookieArr[i].num--;
 								$(this).next("input").val(cookieArr[i].num);
 								$.cookie("goods", JSON.stringify(cookieArr), {
-									expires: 7
+									expires: 7,
+									 path: '/'
 								})
 							}
 
@@ -149,6 +153,76 @@ define(["jquery","jquery-cookie"], function($){
 				sc_car();
 
 			})
+		
+
+			$('.car').find('input').change(function(){
+	            // 获取全选框的状态
+	            is_checked = $(this).prop('checked');
+	            // 遍历商品对应的checkbox，设置的选中状态和全选的保持一致
+	            $('.materials').find(".sel-wid").find('input').each(function () {
+	                $(this).prop('checked', is_checked)
+	            });
+	            // 更新页面信息 
+	            update_page_info();
+	        });
+			alert($('.materials').find(".sel-wid").find('input').attr("class"))
+			
+  			/*$('.materials').find(".sel-wid").find('input').click(function(){
+  				alert(9)
+  			})*/
+
+	        // 商品对应的checkbox状态发生改变时候，设置全选checkbox的状态
+	       /* $('.materials').find(".sel-wid").find('input').change(function(){
+	        	alert(1)
+	            // 获取页面上所有的商品数目
+	            all_len = $('.materials').length;
+	            alert(all_len)
+	            // 获取页面上所有被选中的商品的数目
+	            checked_len = $('.materials').find(".sel-wid").find('input').length;
+	            alert(checked_len)
+	            is_checked = true;
+	            //　判断如果页面上的所有被选中的商品数目小于页面上所有的商品数目，设置全选框架状态
+	            if (checked_len < all_len){
+	                $('.car').find('input').prop('checked', false);
+	            }
+	            else {
+	                $('.car').find('input').prop('checked', true);
+	            }
+	 
+	            // 更新页面信息
+	            update_page_info()
+	        });*/
+
+
+
+			// 计算被选中的商品的总件数和总价格
+	        function update_page_info() {
+	            // 获取所有被选中的商品的checkbox
+	            // 获取所有被选中的商品所在的ul元素,从而获取被选中的商品的数量和价格，计算小计
+	            total_count = 0;
+	            total_price = 0;
+	            $('.materials').find(".sel-wid").find('input').parents('dl').each(function () {
+	                // 获取商品数目和小计
+	                // alert(typeof($(this)));
+	                // alert($(this).attr("class"))
+	                count = $(this).find("#num").val();
+	                // 商品价格
+	                amount = $(this).find("#price").html();
+	                // 累加计算商品总数目和价格
+	                count = parseInt(count);
+	                // alert(count)
+	                amount = parseFloat(amount);
+	                // alert(amount)
+	                total_count += count;
+	                total_price += amount;
+	 
+	            });
+	            // 设置被选中的商品总数目和价格
+	            $('.subtotal').find('#count').text(total_price.toFixed(2));
+	            $('.subtotal').find('strong').text(total_count);
+	            $(".price").find(".buy").attr("id","active")
+	 
+	        }
 
 		})
 		

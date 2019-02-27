@@ -1,6 +1,7 @@
 define(["jquery","jquery-cookie"], function($){
 	function tab1(){
 		$(function(){
+			sc_car()
 			//通过ajax下载数据
 			$.ajax({
 				url:`../data/data_nav1.json`,
@@ -242,10 +243,9 @@ define(["jquery","jquery-cookie"], function($){
 		    if(url.indexOf("?") != -1){ //url中存在问号，也就说有参数。    
 		      var str = url.substr(1);  //得到?后面的字符串
 		      var strs = str.split("&");  //将得到的参数分隔成数组[id="123456",Name="bicycle"];
-		      for(var i = 0; i < strs.length; i ++){   
-		　　　　　　object[strs[i].split("=")[0]]=strs[i].split("=")[1];
-		　　　}
-				// alert(object.id);
+		      for(var i = 0; i < strs.length; i ++){
+		      	object[strs[i].split("=")[0]]=strs[i].split("=")[1];
+		      }				// alert(object.id);
 				$(".b-car").click(function(){
 					$(this).attr("href",`shop.html?id=${object.id}`);
 				})
@@ -257,7 +257,8 @@ define(["jquery","jquery-cookie"], function($){
 						//第一次添加
 						var arr = [{id: id,num:1}];
 						$.cookie("goods", JSON.stringify(arr), {
-							expires: 7
+							expires: 7,
+							 path: '/'
 						})
 					}else{
 						//2、判断之前是否添加过
@@ -280,12 +281,28 @@ define(["jquery","jquery-cookie"], function($){
 
 						//重新存储在数据库中
 						$.cookie("goods", JSON.stringify(arr), {
-							expires: 7
+							expires: 7,
+							path: '/'
 						})
 					}
 				})
 				
 		　　}
+
+			function sc_car(){
+				var cookieStr = $.cookie("goods");
+				if(cookieStr){
+					var arr = eval(cookieStr);
+					var sum = 0; //求和数
+					for(var i = 0; i < arr.length; i++){
+						sum += arr[i].num;
+					}
+					$(".top-bar-right").find("li").eq(1).find("span").html(`(${sum})`);
+				}else{
+					$(".top-bar-right").find("li").eq(1).find("span").html(`(0)`);
+				}
+
+			}	
 
 		})
 	}

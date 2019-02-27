@@ -46,7 +46,7 @@
 		<div class="car">
 			<div class="car-list">
 				<div class="tab-th sel-wid">
-					<span></span>全选
+					<input type="checkbox" class="checkbox" id="active">全选
 				</div>
 				<div class="tab-th pro-wid">商品信息</div>
 				<div class="tab-th pri-wid">单价</div>
@@ -59,7 +59,7 @@
 		<div class="materials">
 			<div class="materials-list">
 				<!-- <dl class="materials-box">
-					<dd class="shop-item sel-wid"><span></span></dd>
+					<dd class="shop-item sel-wid"><input type="checkbox></dd>
 					<dd class="shop-item pro-wid">
 						<span class="left"><a href=""><img src="../images/login/success.png" alt=""></a></span>
 						<span class="right"><p>65Q960C 65英寸QLED量子点剧院电视</p></span>
@@ -84,11 +84,11 @@
 				<a href="" class="fl goonbuy">继续购物>></a>
 				<div class="price-box">
 					<span class="subtotal">
-						<span class="pay-text pay-text-count">共<em>2</em>件商品 已选择0件</span>
+						<span class="pay-text pay-text-count">共<em>2</em>件商品 已选择<strong>0</strong>件</span>
 						<span class="pay-text">合计（不含运费）：</span>
-						<span class="pay-text red"><em>0.00</em>元</span>
+						<span class="pay-text red"><em id="count">0.00</em>元</span>
 					</span>
-					<button class="buy" id="buy">去结算</button>
+					<button class="buy">去结算</button>
 				</div>
 			</div>
 		</div>

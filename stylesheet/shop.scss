@@ -170,13 +170,19 @@ a, a:hover {
 }
 .sel-wid {
     width: 130px;
-     span{
+     input{
         width: 20px;
         height: 20px;
         display: inline-block;
         background-color: #FFF;
         border: 1px solid #999;
         cursor: pointer;
+        border: none;
+    }
+    #active{
+        background-position: -209px -40px;
+        border-color: transparent;
+        background-color: red
     }
 }
 .pro-wid{
@@ -283,15 +289,27 @@ a, a:hover {
         }
     }
 }
-.buy{
-    border: 1px solid #ccc; 
-    width: 230px;
-    height: 50px;
-    background-color: #ccc;
-    color: #FFF;
-    font-size: 16px;
-    text-align: center;
+.price-box{
+    .buy{
+        border: 1px solid #ccc; 
+        width: 230px;
+        height: 50px;
+        background-color: #ccc;
+        color: #FFF;
+        font-size: 16px;
+        text-align: center;
+    }
+    #active{
+        border: 1px solid #ccc; 
+        width: 230px;
+        height: 50px;
+        background-color: red;
+        color: #FFF;
+        font-size: 16px;
+        text-align: center;
+    }
 }
+
 /*help*/
 .help{
     width: 100%;
