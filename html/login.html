@@ -5,12 +5,41 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="../iconfont/iconfont.css">
 	<link rel="stylesheet" href="../css/login.css">
-	<script src = '../js/require.js' async="true" defer data-main = "../js/main-login.js"></script>
+	<script src="../js/jquery-1.11.3.js"></script>
+	<script>
+		$(function(){
+			var oBtn = $("#btn");
+			var oUsername = $("#username");
+			var oPassword = $("#password");
+				oBtn.click(function(){
+					//登录
+					//1、拿到输入框的数据  查询字符串  name1=value1&name2=value2
+					var str = `${oUsername.attr("name")}=${oUsername.val()}&${oPassword.attr("name")}=${oPassword.val()}`;
+
+					//2、通过ajax发送数据到php页面
+					$.ajax({
+						method: 'post',
+						url: "../php/login.php",
+						data: str,
+						success: function(data){
+							alert(data);
+							if(data == "登录成功"){
+								window.location = "../index.html";
+							}
+						},
+						error: function(msg){
+							alert(msg);
+						}
+
+					})
+				})
+		})
+	</script>
 </head>
 <body>
 	<div class="headerBox">
 		<p class="header">
-			<a href="">
+			<a href="../index.html">
 				<img src="../images/login/logo.png" alt="">
 			</a>
 			<span class="crumb">TCL账号登录</span>
@@ -30,15 +59,15 @@
 				<p class="log-title">账号密码登录</p>
 				<div class="fm-group pr">
 					<span class="iconfont ikyuser pa iky01">&#xe674;</span>
-					<input type="text" placeholder="手机号 / 邮箱 / 用户名" class="linfo" id="username">
+					<input type="text" placeholder="手机号 / 邮箱 / 用户名" class="linfo" id="username" name="username">
 					<span></span>
 				</div>
 				<div class="fm-group pr">
 					<span class="iconfont ikyuser pa iky01">&#xe643;</span>
-					<input type="password" placeholder="登录密码" class="linfo" id="password">
+					<input type="password" placeholder="登录密码" class="linfo" id="password" name="password">
 					<span></span>
 				</div>
-				<p class="login-btn"><a href="">登录</a></p>
+				<p class="login-btn"><strong id="btn">登录</strong></p>
 				<p class="o-methds">
 					<a href="">短信验证登录</a>
 					<a href="register.html">注册TCL账号</a>

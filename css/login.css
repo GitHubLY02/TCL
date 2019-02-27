@@ -124,7 +124,7 @@ body{
     padding: 0;
     margin-top: 5px;
 }
-.login-box .login-btn a{
+.login-box .login-btn strong{
     padding: 0;
     color: #fff;
     width: 100%;

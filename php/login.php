@@ -24,6 +24,7 @@
 		echo "登录成功";
 	}else{
 		echo "用户名或密码错误";
+
 	}
 
 	mysql_close($link);
