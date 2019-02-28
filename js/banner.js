@@ -4,7 +4,7 @@ define(["jquery","jquery-cookie"], function($){
 			sc_car()
 			//通过ajax下载数据
 			$.ajax({
-				url:`../data/banner.json`,
+				url:`data/banner.json`,
 				success:function(arr){
 					for(var i = 0; i < arr.length; i++){
 						$(`<li><a href=""><img src="${arr[i].img}" alt=""></a></li>`).appendTo(".banner-content")

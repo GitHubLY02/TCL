@@ -3,7 +3,7 @@ define(["jquery"], function($){
 		$(function(){
 			//通过ajax下载数据
 			$.ajax({
-				url:`../data/data_nav.json`,
+				url:`data/data_nav.json`,
 				success:function(arr){
 					for(var i = 0; i < arr.length; i++){
 						if(i == 0){

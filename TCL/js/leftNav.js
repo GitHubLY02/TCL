@@ -3,7 +3,7 @@ define(["jquery"], function($){
 		$(function(){
 			//通过ajax下载数据
 			$.ajax({
-				url:`../data/leftnav.json`,
+				url:`data/leftnav.json`,
 				success:function(arr){
 					for(var i = 0; i < arr.length; i++){
 							$(`<div id="nav-c${i}" class="ban-nav-cont"></div>`).appendTo(".ban-nav-box");
