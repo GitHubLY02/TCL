@@ -540,7 +540,7 @@ a, a:hover {
 .layout .series .c_series .series-content .sec-right div:hover{
     box-shadow:0px 0px 2px 3px #ccc;
 }
-.layout .series .float_nav{
+.layout .float_nav{
     position: fixed;
     margin-left: -80px;
     width: 70px;

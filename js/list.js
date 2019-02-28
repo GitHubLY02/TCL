@@ -60,6 +60,41 @@ define(["jquery"], function($){
 			}) */
 			$(location).attr("href",`../html/product.html?id=${id}`);
 		})
+
+		$(window).scroll(function(){
+				var t = $(window).scrollTop();
+				if(t < 790){
+					$(".float_nav").css("display","none");
+				}else{
+					var t = t - 790;
+					$(".float_nav").css("display","block");
+				}
+		})
+
+		$(".float_nav").on("click","li",function(){
+				if($(this).index() == 0){
+					$("html, body").animate({
+				      scrollTop: $(".series0").offset().top });
+				    return false;
+				}
+				if($(this).index() == 1){
+					$("html, body").animate({
+				      scrollTop: $(".series1").offset().top });
+				    return false;
+				}
+				if($(this).index() == 2){
+					$("html, body").animate({
+				      scrollTop: $(".series2").offset().top });
+				    return false;
+				}
+				if($(this).index() == 3){
+					$("html, body").animate({
+				      scrollTop: $(".series3").offset().top });
+				    return false;
+				}
+			})
+
+
 	}
 	return {
 		list: list

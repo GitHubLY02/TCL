@@ -74,6 +74,7 @@ define(["jquery","jquery-cookie"], function($){
 				$(".options").find("span").attr("class","");
 				$(this).attr("class","active");
 			})
+
 			$(".imgLoad").on("mouseenter",".purc-t",function(){
 				$(".imgLoad").find("#mask").css("display","block");
 				$(".imgLoad-big").css("display","block");
@@ -85,9 +86,10 @@ define(["jquery","jquery-cookie"], function($){
 				$(".imgLoad").find("#mask").css("display","none");
 				$(".imgLoad-big").css("display","none");
 			})
+
 			$(".imgLoad").on("mousemove",".purc-t",function(ev){
-				var l = ev.pageX - $(this).offset().left;
-				var t = ev.pageY - $(this).offset().top;
+				var l = ev.pageX - $(this).offset().left - 50;
+				var t = ev.pageY - $(this).offset().top - 50;
 				if(l <= 0){
 					l = 0;
 				}
@@ -102,8 +104,8 @@ define(["jquery","jquery-cookie"], function($){
 				}
 				$("#mask").css("left",l);
 				$("#mask").css("top",t);
-				var left = -$("#mask").offset().left;
-				var top = -$("#mask").offset().top;
+				var left = -($("#mask").offset().left) + 100 ;
+				var top = -($("#mask").offset().top) - 100;
 				$(".imgLoad-big").find(".purc-big").css("left",left);
 				$(".imgLoad-big").find(".purc-big").css("top",top);
 			})
