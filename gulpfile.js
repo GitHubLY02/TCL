@@ -6,11 +6,7 @@ gulp.task("copy-indexhtml", function(){
 	.pipe(gulp.dest("TCL"))
 	.pipe(connect.reload())
 })
-gulp.task("copy-html", function(){
-	return gulp.src("html/*")
-	.pipe(gulp.dest("TCL/html"))
-	.pipe(connect.reload())
-})
+
 gulp.task("copy-iconfont", function(){
 	return gulp.src("iconfont/*")
 	.pipe(gulp.dest("TCL/iconfont"))
@@ -94,7 +90,7 @@ gulp.task("copy-css", function(){
 	先要将上述所有的任务都运行一遍
 	build 一次性执行多个任务
 */
-gulp.task("build", ["copy-indexhtml","copy-html","copy-iconfont","copy-php", "images", "scripts-index", "scripts", "data", "sass","copy-css", "scripts-index","css"], function(){
+gulp.task("build", ["copy-indexhtml","copy-iconfont","copy-php", "images", "scripts-index", "scripts", "data", "sass","copy-css", "scripts-index","css"], function(){
 	console.log("任务执行完成，项目已建立");
 })
 /*
@@ -103,7 +99,6 @@ gulp.task("build", ["copy-indexhtml","copy-html","copy-iconfont","copy-php", "im
 
 gulp.task("watch", function(){
 	gulp.watch("*.html", ["copy-indexhtml"]);
-	gulp.watch("html/*", ["copy-html"]);
 	gulp.watch("iconfont/*", ["copy-iconfont"]);
 	gulp.watch("images/**/*", ["images"]);
 	gulp.watch(["js/*", "!gulpfile.js", "!index.js"], ["scripts"]);

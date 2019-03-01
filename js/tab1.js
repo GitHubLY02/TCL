@@ -4,7 +4,7 @@ define(["jquery","jquery-cookie"], function($){
 			sc_car()
 			//通过ajax下载数据
 			$.ajax({
-				url:`../data/data_nav1.json`,
+				url:`data/data_nav1.json`,
 				success:function(arr){
 					for(var i = 0; i < arr.length; i++){
 						if(i == 0){
@@ -104,8 +104,8 @@ define(["jquery","jquery-cookie"], function($){
 				}
 				$("#mask").css("left",l);
 				$("#mask").css("top",t);
-				var left = -($("#mask").offset().left) + 100 ;
-				var top = -($("#mask").offset().top) - 100;
+				var left = (-($("#mask").offset().left) + 254.5) * 2 ;
+				var top = (-($("#mask").offset().top) + 151 ) * 2;
 				$(".imgLoad-big").find(".purc-big").css("left",left);
 				$(".imgLoad-big").find(".purc-big").css("top",top);
 			})
@@ -138,7 +138,7 @@ define(["jquery","jquery-cookie"], function($){
 			})
 
 			$.ajax({
-				url:"../data/product.json",
+				url:"data/product.json",
 				success:function(arr){
 					for(var i = 0; i < arr.length; i++){
 						$(`<p><img src="${arr[i].img}" alt=""></p>`).appendTo($("#details-l"));
@@ -150,7 +150,7 @@ define(["jquery","jquery-cookie"], function($){
 			})
 
 			$.ajax({
-				url:"../data/product1.json",
+				url:"data/product1.json",
 				success:function(arr){
 					for(var i = 0; i < arr.length; i++){
 						if(i == 0){
@@ -176,7 +176,7 @@ define(["jquery","jquery-cookie"], function($){
 			})
 
 			$.ajax({
-				url:"../data/product2.json",
+				url:"data/product2.json",
 				success:function(arr){
 					for(var i = 0; i < arr.length; i++){
 						$(`<tr>
@@ -249,7 +249,7 @@ define(["jquery","jquery-cookie"], function($){
 		      	object[strs[i].split("=")[0]]=strs[i].split("=")[1];
 		      }				// alert(object.id);
 				$(".b-car").click(function(){
-					$(this).attr("href",`shop.html?id=${object.id}`);
+					$(this).attr("href",`shop.html`);
 				})
 				var id = object.id;
 				// 加入cookie
@@ -260,7 +260,6 @@ define(["jquery","jquery-cookie"], function($){
 						var arr = [{id: id,num:1}];
 						$.cookie("goods", JSON.stringify(arr), {
 							expires: 7,
-							 path: '/'
 						})
 					}else{
 						//2、判断之前是否添加过
@@ -284,7 +283,6 @@ define(["jquery","jquery-cookie"], function($){
 						//重新存储在数据库中
 						$.cookie("goods", JSON.stringify(arr), {
 							expires: 7,
-							path: '/'
 						})
 					}
 				})

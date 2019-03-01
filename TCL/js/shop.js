@@ -5,7 +5,7 @@ define(["jquery","jquery-cookie"], function($){
 			
 			//添加节点
 			$.ajax({
-					url: "../data/shop.json",
+					url: "data/shop.json",
 					success: function(goodsArr){
 						if($.cookie("goods")){
 							//取出购物车里面存储的商品内容
@@ -100,8 +100,10 @@ define(["jquery","jquery-cookie"], function($){
 							//删除数组中的元素
 							cookieArr.splice(i, 1);
 							break;
+							alert(cookieArr);
 						}
 					}
+					alert(cookieArr.length);
 
 					//判断删除完毕以后是否是空数组
 					if(cookieArr.length == 0){
@@ -109,7 +111,6 @@ define(["jquery","jquery-cookie"], function($){
 					}else{
 						$.cookie("goods", JSON.stringify(cookieArr), {
 							expires: 7,
-							 path: '/'
 						})
 					}
 				}
@@ -133,7 +134,6 @@ define(["jquery","jquery-cookie"], function($){
 
 							$.cookie("goods", JSON.stringify(cookieArr), {
 										expires: 7,
-										 path: '/'
 									})
 							break;
 						}else{
@@ -148,7 +148,6 @@ define(["jquery","jquery-cookie"], function($){
 								}else{
 									$.cookie("goods", JSON.stringify(cookieArr), {
 										expires: 7,
-										 path: '/'
 									})
 								}
 
@@ -158,7 +157,6 @@ define(["jquery","jquery-cookie"], function($){
 								$(this).next("input").val(cookieArr[i].num);
 								$.cookie("goods", JSON.stringify(cookieArr), {
 									expires: 7,
-									 path: '/'
 								})
 							}
 

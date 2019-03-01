@@ -3,44 +3,15 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<link rel="stylesheet" href="../iconfont/iconfont.css">
-	<link rel="stylesheet" href="../css/login.css">
-	<script src="../js/jquery-1.11.3.js"></script>
-	<script>
-		$(function(){
-			var oBtn = $("#btn");
-			var oUsername = $("#username");
-			var oPassword = $("#password");
-				oBtn.click(function(){
-					//登录
-					//1、拿到输入框的数据  查询字符串  name1=value1&name2=value2
-					var str = `${oUsername.attr("name")}=${oUsername.val()}&${oPassword.attr("name")}=${oPassword.val()}`;
-
-					//2、通过ajax发送数据到php页面
-					$.ajax({
-						method: 'post',
-						url: "../php/login.php",
-						data: str,
-						success: function(data){
-							alert(data);
-							if(data == "登录成功"){
-								window.location = "../index.html";
-							}
-						},
-						error: function(msg){
-							alert(msg);
-						}
-
-					})
-				})
-		})
-	</script>
+	<link rel="stylesheet" href="iconfont/iconfont.css">
+	<link rel="stylesheet" href="css/login.css">
+	<script src = 'js/require.js' async="true" defer data-main = "js/main-login"></script>
 </head>
 <body>
 	<div class="headerBox">
 		<p class="header">
-			<a href="../index.html">
-				<img src="../images/login/logo.png" alt="">
+			<a href="index.html">
+				<img src="images/login/logo.png" alt="">
 			</a>
 			<span class="crumb">TCL账号登录</span>
 		</p>

@@ -58,7 +58,7 @@ define(["jquery"], function($){
 					}
 
 			}) */
-			$(location).attr("href",`../html/product.html?id=${id}`);
+			$(location).attr("href",`product.html?id=${id}`);
 		})
 
 		$(window).scroll(function(){
