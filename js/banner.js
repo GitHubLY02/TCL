@@ -3,7 +3,7 @@ define(["jquery","jquery-cookie"], function($){
 		$(function(){
 			sc_car()
 			//通过ajax下载数据
-		/*	$.ajax({
+			/*$.ajax({
 				url:`data/banner.json`,
 				success:function(arr){
 					for(var i = 0; i < arr.length; i++){

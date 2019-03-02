@@ -249,7 +249,7 @@ define(["jquery","jquery-cookie"], function($){
 		      	object[strs[i].split("=")[0]]=strs[i].split("=")[1];
 		      }				// alert(object.id);
 				$(".b-car").click(function(){
-					$(this).attr("href",`shop.html`);
+					$(this).attr("href",`shop.html?id=${object.id}`);
 				})
 				var id = object.id;
 				// 加入cookie
@@ -259,7 +259,7 @@ define(["jquery","jquery-cookie"], function($){
 						//第一次添加
 						var arr = [{id: id,num:1}];
 						$.cookie("goods", JSON.stringify(arr), {
-							expires: 7,
+							expires: 7
 						})
 					}else{
 						//2、判断之前是否添加过
@@ -282,7 +282,7 @@ define(["jquery","jquery-cookie"], function($){
 
 						//重新存储在数据库中
 						$.cookie("goods", JSON.stringify(arr), {
-							expires: 7,
+							expires: 7
 						})
 					}
 				})

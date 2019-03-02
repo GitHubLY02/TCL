@@ -19,9 +19,10 @@ a, a:hover {
 }
 /*header*/
 .headerBox{
-	width: 1349px;
+    margin:0 auto;
 }
 .headerBox .header{
+    margin:0 auto;
 }
 .headerBox .header .top-bar{
 	width:100%;
@@ -208,8 +209,8 @@ a, a:hover {
 
 /*banner*/
 .bannerBox{
-	width: 1349px;
 	height: 550px;
+    margin:0 auto;
 }
 .bannerBox .banner-nav{
 	width: 1228px;
@@ -411,8 +412,7 @@ a, a:hover {
 
 /*new product start*/
 .layout{
-	width: 1349px;
-	
+	margin:0 auto;
 }
 .layout .new-product{
 	width: 1228px;

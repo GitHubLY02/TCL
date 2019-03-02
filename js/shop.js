@@ -100,17 +100,15 @@ define(["jquery","jquery-cookie"], function($){
 							//删除数组中的元素
 							cookieArr.splice(i, 1);
 							break;
-							alert(cookieArr);
 						}
 					}
-					alert(cookieArr.length);
 
 					//判断删除完毕以后是否是空数组
 					if(cookieArr.length == 0){
 						$.cookie("goods", null);
 					}else{
 						$.cookie("goods", JSON.stringify(cookieArr), {
-							expires: 7,
+							expires: 7
 						})
 					}
 				}
@@ -134,12 +132,13 @@ define(["jquery","jquery-cookie"], function($){
 
 							$.cookie("goods", JSON.stringify(cookieArr), {
 										expires: 7,
+	
 									})
 							break;
 						}else{
 							//判断数量是否是1
 							if(cookieArr[i].num == 1){
-								$(this).closest("li").remove();
+								$(this).closest(".materials-box").remove();
 
 								//删除
 								cookieArr.splice(i, 1);
@@ -148,6 +147,7 @@ define(["jquery","jquery-cookie"], function($){
 								}else{
 									$.cookie("goods", JSON.stringify(cookieArr), {
 										expires: 7,
+	
 									})
 								}
 
@@ -157,6 +157,7 @@ define(["jquery","jquery-cookie"], function($){
 								$(this).next("input").val(cookieArr[i].num);
 								$.cookie("goods", JSON.stringify(cookieArr), {
 									expires: 7,
+
 								})
 							}
 
